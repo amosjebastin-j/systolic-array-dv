@@ -1,0 +1,15 @@
+sim_build*/
+results/
+results.xml
+__pycache__/
+*.vcd
+*.fst
+xcelium.d/
+xrun.*
+csrc/
+simv*
+*.log
+*.key
+ucli.key
+work/
+transcript
