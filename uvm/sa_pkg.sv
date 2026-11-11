@@ -201,6 +201,8 @@ package sa_pkg;
         `uvm_component_utils(sa_coverage)
         apb_item t;
         covergroup cg_bus;
+            option.per_instance = 1;
+            option.name = "bus";
             cp_region: coverpoint t.addr[11:8] {
                 bins regs = {0}; bins a = {1}; bins b = {2}; bins c = {3}; bins unmapped = {[4:15]};
             }
@@ -215,12 +217,16 @@ package sa_pkg;
             }
         endgroup
         covergroup cg_operand;
+            option.per_instance = 1;
+            option.name = "operand";
             cp_val: coverpoint $signed(t.data[7:0]) {
                 bins min = {-128}; bins neg = {[-127:-2]}; bins m1 = {-1}; bins zero = {0};
                 bins one = {1}; bins pos = {[2:126]}; bins max = {127};
             }
         endgroup
         covergroup cg_result;
+            option.per_instance = 1;
+            option.name = "result";
             cp_c: coverpoint $signed(t.rdata) {
                 bins max_neg = {-128*127*N}; bins neg_large = {[-128*127*N+1:-32769]};
                 bins neg = {[-32768:-1]}; bins zero = {0}; bins pos = {[1:32768]};
@@ -231,13 +237,19 @@ package sa_pkg;
             super.new(name, parent);
             cg_bus = new(); cg_operand = new(); cg_result = new();
         endfunction
+        int unsigned hits[string];     // per-combination hit table, printed at the end
         function void write(apb_item t);
+            string rn = (t.addr[11:8] == 0) ? "regs" : (t.addr[11:8] == 1) ? "A" :
+                        (t.addr[11:8] == 2) ? "B" : (t.addr[11:8] == 3) ? "C" : "unmapped";
+            string key = $sformatf("%-8s %s err=%0d", rn, t.write ? "WR" : "RD", t.slverr);
+            hits[key]++;
             this.t = t;
             cg_bus.sample();
             if (t.write && !t.slverr && t.addr[9:8] inside {1, 2}) cg_operand.sample();
             if (!t.write && !t.slverr && t.addr[9:8] == 3) cg_result.sample();
         endfunction
         function void report_phase(uvm_phase phase);
+            foreach (hits[k]) `uvm_info("COV", $sformatf("  bus combo  %-22s hits=%0d", k, hits[k]), UVM_NONE)
             `uvm_info("COV", $sformatf("bus=%.1f%%  operands=%.1f%%  results=%.1f%%",
                 cg_bus.get_coverage(), cg_operand.get_coverage(), cg_result.get_coverage()), UVM_NONE)
         endfunction
@@ -329,6 +341,11 @@ package sa_pkg;
             rd(C_BASE, d, e);            // legal partial read
             poll_done();
             rd(CYCLES, d, e);
+            // operand read-back (scoreboard compares against its shadow copy; the failed busy-time writes must not have changed it)
+            rd(A_BASE, d, e);
+            rd(A_BASE + 12'(4*(N*N-1)), d, e);
+            rd(B_BASE, d, e);
+            rd(B_BASE + 12'(4*(N*N-1)), d, e);
         endtask
     endclass
 
@@ -367,6 +384,11 @@ package sa_pkg;
                 sa_matmul_seq s = sa_matmul_seq::type_id::create("s");
                 if (!s.randomize()) `uvm_fatal("RND", "matmul seq")
                 s.start(env.agt.sqr);
+            end
+            // finish with the error/busy-behaviour sequence so one run closes the bus coverage
+            begin
+                sa_error_seq es = sa_error_seq::type_id::create("es_end");
+                es.start(env.agt.sqr);
             end
             phase.drop_objection(this);
         endtask

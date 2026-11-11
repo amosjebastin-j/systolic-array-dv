@@ -1,0 +1,86 @@
+uvm_macros.svh design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Nov 10, 2026 at 22:43:55 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		uvm_pkg
+		sa_pkg
+		tb_top
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> source /xcelium25.03/tools//methodology/UVM/CDNS-1.2/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+UVM_INFO /xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+CDNS-UVM-1.2 (25.03-s001)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test sa_random_test...
+UVM_INFO /xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_objection.svh(1271) @ 362165000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  A        RD err=0      hits=2
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  A        WR err=0      hits=3248
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  A        WR err=1      hits=1
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  B        RD err=0      hits=2
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  B        WR err=0      hits=3248
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  B        WR err=1      hits=1
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  C        RD err=0      hits=3249
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  C        WR err=1      hits=1
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  regs     RD err=0      hits=1018
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  regs     RD err=1      hits=2
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  regs     WR err=0      hits=205
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  regs     WR err=1      hits=5
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  unmapped RD err=1      hits=3
+UVM_INFO testbench.sv(302) @ 362165000: uvm_test_top.env.cov [COV]   bus combo  unmapped WR err=1      hits=3
+UVM_INFO testbench.sv(304) @ 362165000: uvm_test_top.env.cov [COV] bus=100.0%  operands=100.0%  results=100.0%
+UVM_INFO testbench.sv(244) @ 362165000: uvm_test_top.env.sb [SB] operations=204  C values checked=3248  error responses checked=14
+UVM_INFO testbench.sv(411) @ 362165000: uvm_test_top [TEST] *** TEST PASSED ***
+UVM_INFO /xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_server.svh(851) @ 362165000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   20
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]    15
+[RNTST]     1
+[SB]     1
+[TEST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+
+Simulation complete via $finish(1) at time 362165 NS + 65
+/xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh:543     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_top(tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_530ce7e5.ucm
+  data               :  ./cov_work/scope/test/icc_00000000_530ce7e5.ucd
+
