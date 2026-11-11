@@ -1,0 +1,185 @@
+TOOL:	xrun	25.03-s001: Started on Nov 11, 2026 at 04:56:28 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		uvm_pkg
+		sa_pkg
+		mlp_pkg
+		mlp_tb_top
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.mlp_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> source /xcelium25.03/tools//methodology/UVM/CDNS-1.2/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+UVM_INFO /xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+CDNS-UVM-1.2 (25.03-s001)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test mlp_random_test...
+UVM_ERROR testbench.sv(686) @ 645000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000ac75c)
+UVM_ERROR testbench.sv(686) @ 655000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000ac75c)
+UVM_ERROR testbench.sv(686) @ 1325000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b83a4)
+UVM_ERROR testbench.sv(686) @ 1335000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b83a4)
+UVM_ERROR testbench.sv(686) @ 2045000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000aec7c)
+UVM_ERROR testbench.sv(686) @ 2075000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000aec7c)
+UVM_ERROR testbench.sv(686) @ 2825000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 1 of 3 (burst 0x000b6ff4)
+UVM_ERROR testbench.sv(686) @ 2835000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 2 of 3 (burst 0x000b6ff4)
+UVM_ERROR testbench.sv(686) @ 3565000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000ae3e8)
+UVM_ERROR testbench.sv(686) @ 3575000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000ae3e8)
+UVM_ERROR testbench.sv(686) @ 4315000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b6e78)
+UVM_ERROR testbench.sv(686) @ 4325000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b6e78)
+UVM_ERROR testbench.sv(686) @ 5095000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b63b0)
+UVM_ERROR testbench.sv(686) @ 5115000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b63b0)
+UVM_ERROR testbench.sv(686) @ 5825000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000acf70)
+UVM_ERROR testbench.sv(686) @ 5835000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000acf70)
+UVM_ERROR testbench.sv(686) @ 6465000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b0448)
+UVM_ERROR testbench.sv(686) @ 6495000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b0448)
+UVM_ERROR testbench.sv(686) @ 7285000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 1 of 3 (burst 0x000b4ff4)
+UVM_ERROR testbench.sv(686) @ 7305000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 2 of 3 (burst 0x000b4ff4)
+UVM_ERROR testbench.sv(686) @ 8115000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000be484)
+UVM_ERROR testbench.sv(686) @ 8135000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000be484)
+UVM_ERROR testbench.sv(686) @ 8845000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00088c48)
+UVM_ERROR testbench.sv(686) @ 8855000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00088c48)
+UVM_ERROR testbench.sv(686) @ 9595000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00090c90)
+UVM_ERROR testbench.sv(686) @ 9605000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00090c90)
+UVM_ERROR testbench.sv(686) @ 10445000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 1 of 3 (burst 0x000a8ff4)
+UVM_ERROR testbench.sv(686) @ 10455000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 2 of 3 (burst 0x000a8ff4)
+UVM_ERROR testbench.sv(686) @ 11175000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b8810)
+UVM_ERROR testbench.sv(686) @ 11205000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b8810)
+UVM_ERROR testbench.sv(686) @ 11985000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00088ce0)
+UVM_ERROR testbench.sv(686) @ 11995000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00088ce0)
+UVM_ERROR testbench.sv(686) @ 12825000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 1 of 3 (burst 0x00089000)
+UVM_ERROR testbench.sv(686) @ 12845000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 2 of 3 (burst 0x00089000)
+UVM_ERROR testbench.sv(686) @ 13595000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x0008cff8)
+UVM_ERROR testbench.sv(686) @ 13605000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x0008cff8)
+UVM_ERROR testbench.sv(686) @ 13705000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x0008d000)
+UVM_ERROR testbench.sv(686) @ 13715000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x0008d000)
+UVM_ERROR testbench.sv(686) @ 14435000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000a2668)
+UVM_ERROR testbench.sv(686) @ 14445000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000a2668)
+UVM_ERROR testbench.sv(686) @ 15175000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x0008aae8)
+UVM_ERROR testbench.sv(686) @ 15185000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x0008aae8)
+UVM_ERROR testbench.sv(686) @ 15875000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000a64ac)
+UVM_ERROR testbench.sv(686) @ 15885000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000a64ac)
+UVM_ERROR testbench.sv(686) @ 16545000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00092cf4)
+UVM_ERROR testbench.sv(686) @ 16565000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00092cf4)
+UVM_ERROR testbench.sv(686) @ 17235000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b0d44)
+UVM_ERROR testbench.sv(686) @ 17255000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b0d44)
+UVM_ERROR testbench.sv(686) @ 17985000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x0009cf20)
+UVM_ERROR testbench.sv(686) @ 17995000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x0009cf20)
+UVM_ERROR testbench.sv(686) @ 18705000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000ae3b4)
+UVM_ERROR testbench.sv(686) @ 18715000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000ae3b4)
+UVM_ERROR testbench.sv(686) @ 19425000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000ac840)
+UVM_ERROR testbench.sv(686) @ 19435000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000ac840)
+UVM_ERROR testbench.sv(686) @ 20115000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000929ec)
+UVM_ERROR testbench.sv(686) @ 20125000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000929ec)
+UVM_ERROR testbench.sv(686) @ 20725000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000942c8)
+UVM_ERROR testbench.sv(686) @ 20735000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000942c8)
+UVM_ERROR testbench.sv(686) @ 21365000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000aea04)
+UVM_ERROR testbench.sv(686) @ 21375000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000aea04)
+UVM_ERROR testbench.sv(686) @ 21995000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000a4ec4)
+UVM_ERROR testbench.sv(686) @ 22015000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000a4ec4)
+UVM_ERROR testbench.sv(686) @ 22625000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00088bbc)
+UVM_ERROR testbench.sv(686) @ 22635000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00088bbc)
+UVM_ERROR testbench.sv(686) @ 23455000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000bcff8)
+UVM_ERROR testbench.sv(686) @ 23485000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000bcff8)
+UVM_ERROR testbench.sv(686) @ 23515000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000bd000)
+UVM_ERROR testbench.sv(686) @ 23525000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000bd000)
+UVM_ERROR testbench.sv(686) @ 24295000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x0009a4e0)
+UVM_ERROR testbench.sv(686) @ 24305000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x0009a4e0)
+UVM_ERROR testbench.sv(686) @ 24995000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000c2fb4)
+UVM_ERROR testbench.sv(686) @ 25005000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000c2fb4)
+UVM_ERROR testbench.sv(686) @ 25715000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000bc8b8)
+UVM_ERROR testbench.sv(686) @ 25735000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000bc8b8)
+UVM_ERROR testbench.sv(686) @ 26545000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 1 of 3 (burst 0x00094ff4)
+UVM_ERROR testbench.sv(686) @ 26555000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 2 of 3 (burst 0x00094ff4)
+UVM_ERROR testbench.sv(686) @ 27375000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000c6ff8)
+UVM_ERROR testbench.sv(686) @ 27385000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000c6ff8)
+UVM_ERROR testbench.sv(686) @ 27455000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000c7000)
+UVM_ERROR testbench.sv(686) @ 27465000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000c7000)
+UVM_ERROR testbench.sv(686) @ 28155000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000c6d64)
+UVM_ERROR testbench.sv(686) @ 28165000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000c6d64)
+UVM_ERROR testbench.sv(686) @ 28935000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000b4ff8)
+UVM_ERROR testbench.sv(686) @ 28955000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000b4ff8)
+UVM_ERROR testbench.sv(686) @ 28995000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000b5000)
+UVM_ERROR testbench.sv(686) @ 29025000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000b5000)
+UVM_ERROR testbench.sv(686) @ 29835000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 1 of 3 (burst 0x0008aff4)
+UVM_ERROR testbench.sv(686) @ 29845000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 2 of 3 (burst 0x0008aff4)
+UVM_ERROR testbench.sv(686) @ 30625000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b00c0)
+UVM_ERROR testbench.sv(686) @ 30635000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b00c0)
+UVM_ERROR testbench.sv(686) @ 31355000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x0008eff8)
+UVM_ERROR testbench.sv(686) @ 31365000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x0008eff8)
+UVM_ERROR testbench.sv(686) @ 31425000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x0008f000)
+UVM_ERROR testbench.sv(686) @ 31455000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x0008f000)
+UVM_ERROR testbench.sv(686) @ 32115000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x0008cfd8)
+UVM_ERROR testbench.sv(686) @ 32125000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x0008cfd8)
+UVM_ERROR testbench.sv(686) @ 32825000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000b6a68)
+UVM_ERROR testbench.sv(686) @ 32835000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000b6a68)
+UVM_ERROR testbench.sv(686) @ 33485000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00098b0c)
+UVM_ERROR testbench.sv(686) @ 33495000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00098b0c)
+UVM_ERROR testbench.sv(686) @ 34205000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x00090754)
+UVM_ERROR testbench.sv(686) @ 34225000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x00090754)
+UVM_ERROR testbench.sv(686) @ 34935000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000c48d4)
+UVM_ERROR testbench.sv(686) @ 34955000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000c48d4)
+UVM_ERROR testbench.sv(686) @ 35625000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x0009c034)
+UVM_ERROR testbench.sv(686) @ 35635000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x0009c034)
+UVM_ERROR testbench.sv(686) @ 36395000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000a4ff8)
+UVM_ERROR testbench.sv(686) @ 36405000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000a4ff8)
+UVM_ERROR testbench.sv(686) @ 36475000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 0 of 2 (burst 0x000a5000)
+UVM_ERROR testbench.sv(686) @ 36495000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 1 of 2 (burst 0x000a5000)
+UVM_ERROR testbench.sv(686) @ 37155000: uvm_test_top.env.axi [AXI] WLAST=1 on beat 2 of 4 (burst 0x000be574)
+UVM_ERROR testbench.sv(686) @ 37165000: uvm_test_top.env.axi [AXI] WLAST=0 on beat 3 of 4 (burst 0x000be574)
+UVM_INFO /xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_objection.svh(1271) @ 37265000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO testbench.sv(778) @ 37265000: uvm_test_top.env.axi [AXI] read bursts=124 write bursts=62 bursts ending on a 4KB boundary=36 violations=112
+UVM_INFO testbench.sv(888) @ 37265000: uvm_test_top.env.sb [SB] ops checked=50  outputs checked=800  mismatches=0  error ops=0
+UVM_INFO testbench.sv(890) @ 37265000: uvm_test_top.env.sb [COV] op=84.0%  output=100.0%  errors=0.0%
+UVM_INFO testbench.sv(1120) @ 37265000: uvm_test_top [TEST] *** TEST FAILED ***
+UVM_INFO /xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_server.svh(851) @ 37265000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    7
+UVM_WARNING :    0
+UVM_ERROR :  112
+UVM_FATAL :    0
+** Report counts by id
+[AXI]   113
+[COV]     1
+[RNTST]     1
+[SB]     1
+[TEST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+
+Simulation complete via $finish(1) at time 37265 NS + 65
+/xcelium25.03/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh:543     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  mlp_tb_top(mlp_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_340eb039.ucm
+  data               :  ./cov_work/scope/test/icc_00000000_340eb039.ucd

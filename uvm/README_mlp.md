@@ -31,3 +31,13 @@ cd uvm
 xrun -uvm -sv -f mlp_files.f -top mlp_tb_top +UVM_TESTNAME=mlp_full_test -coverage functional
 vcs -sverilog -ntb_opts uvm-1.2 -timescale=1ns/1ps -f mlp_files.f -top mlp_tb_top -o simv && ./simv +UVM_TESTNAME=mlp_ral_test
 ```
+
+## Results (Cadence Xcelium 25.03, UVM 1.2, run on EDA Playground)
+
+| Run | Result |
+|---|---|
+| `mlp_full_test +NUM_OPS=100` | PASS, `UVM_ERROR: 0`; 152 operations, 2,432 outputs checked, 0 mismatches, 5 error operations; functional coverage op 100%, output 100%, errors 100%; 606 AXI bursts, 144 ending on a 4 KB boundary, 0 protocol violations |
+| `mlp_ral_test` | PASS; `uvm_reg_hw_reset_seq` on all 11 registers, `uvm_reg_bit_bash_seq` on every bit of the 6 RW registers |
+| `mlp_random_test` with `+define+BUG_WLAST` | FAIL (as intended): 112 `UVM_ERROR` from the WLAST protocol check. The data scoreboard reported 0 mismatches, so only the protocol checker detects this bug |
+
+Logs: `uvm/logs/mlp_*.log`.
