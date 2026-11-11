@@ -1,0 +1,10 @@
+../rtl/sa_pe.v
+../rtl/systolic_array.v
+../rtl/sa_core.v
+../rtl/mlp_requant.v
+../rtl/mlp_top.v
+apb_if.sv
+mlp_axi_if.sv
+sa_pkg.sv
+mlp_pkg.sv
+mlp_tb_top.sv
