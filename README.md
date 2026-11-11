@@ -4,7 +4,7 @@ An **N×N INT8 output-stationary systolic array** (the compute core of ML infere
 with an **APB3** control interface, verified with a **cocotb constrained-random testbench**,
 a **UVM environment with SVA**, functional coverage, and a **bug-injection campaign**.
 
-![regression](../../actions/workflows/regression.yml/badge.svg)
+[![regression](https://github.com/amosjebastin-j/systolic-array-dv/actions/workflows/regression.yml/badge.svg)](https://github.com/amosjebastin-j/systolic-array-dv/actions)
 
 ## Architecture
 ```
